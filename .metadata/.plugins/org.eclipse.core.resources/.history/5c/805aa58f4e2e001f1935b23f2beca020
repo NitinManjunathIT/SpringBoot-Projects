@@ -1,0 +1,27 @@
+package in.pwskills.nitin.beans;
+
+import java.time.LocalDateTime;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class WishMessageGenerator {
+
+	private LocalDateTime ldt;
+
+	public String wishMessage(String user) {
+		int hour = ldt.getHour();
+		String msg = "";
+		if (hour < 12) {
+			msg += "Good morning :: " + user;
+		} else if (hour < 16) {
+			msg += "Good Afternoon :: " + user;
+		} else if (hour < 20) {
+			msg += "Good Evening :: " + user;
+		} else {
+			msg += "Good Night :: " + user;
+		}
+		return msg;
+	}
+
+}

@@ -1,0 +1,5 @@
+package in.pwskills.nitin.beans;
+
+public class WishMessageGenerator {
+
+}
