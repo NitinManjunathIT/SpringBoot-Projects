@@ -1,8 +1,0 @@
-package in.pwskills.nitin.beans;
-
-import org.springframework.stereotype.Component;
-
-@Component
-public class WishMessageGenerator {
-
-}
