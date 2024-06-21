@@ -1,5 +1,7 @@
 package in.pwskills.nitin;
 
+import javax.sql.DataSource;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -16,6 +18,11 @@ public class Application {
 
 		Employee employee = context.getBean(Employee.class);
 		System.out.println(employee);
+		
+		DataSource source = context.getBean(DataSource.class);
+		System.out.println("DataSource is :: "+source.getClass().getName());
+		
+		System.out.println();
 
 		// closing the container
 		((ConfigurableApplicationContext) context).close();
