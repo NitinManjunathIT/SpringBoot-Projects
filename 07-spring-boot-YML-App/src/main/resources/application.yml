@@ -9,7 +9,6 @@
 #emp.info.company.location = Delhi 
 #emp.info.company.size = 10 
 
-
 emp:
   info:
     name: sachin

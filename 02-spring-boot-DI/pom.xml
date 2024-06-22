@@ -11,7 +11,7 @@
 	</parent>
 	
 	<groupId>pwskills</groupId>
-	<artifactId>01-spring-boot-DI</artifactId>
+	<artifactId>02-spring-boot-DI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>01-spring-boot-DI</name>
 	<description>Demo project for Spring Boot</description>
