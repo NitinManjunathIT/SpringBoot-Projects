@@ -13,7 +13,6 @@ import in.pwskills.nitin.beans.Employee;
 public class Application {
 	public static void main(String[] args) {
 		// Start the container
-		System.out.println("***********Container Started****************");
 		ApplicationContext context = SpringApplication.run(Application.class, args);
 
 		Employee employee = context.getBean(Employee.class);
@@ -26,7 +25,6 @@ public class Application {
 
 		// closing the container
 		((ConfigurableApplicationContext) context).close();
-		System.out.println("***********Container Stopped****************");
 	}
 
 }
