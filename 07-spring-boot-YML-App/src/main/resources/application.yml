@@ -1,0 +1,33 @@
+#emp.info.name = sachin
+#emp.info.eid  = 10
+#emp.info.nickNames = masterblaster,littlemaster
+#emp.info.friendsNames = saurav,dravid,sehwagh,yuvi
+#emp.info.phoneNumber = 7778889997, 9998887776,8886667775
+#emp.info.bankDetails.canarabank = 2223335
+#emp.info.bankDetails.sbibank    = 3335552
+#emp.info.company.title = BCCI 
+#emp.info.company.location = Delhi 
+#emp.info.company.size = 10 
+
+
+emp:
+  info:
+    name: sachin
+    eid: 10
+    #Array
+    nickNames: masterblaster,littlemaster  
+    #List
+    friendsNames: saurav,drvid,sehwagh,yuvi 
+    #Set
+    phoneNumber: 7778889997, 9998887776,8886667775 
+    #Map<K,V>
+    bankDetails:
+      canara: 2223335
+      sbi: 3335552 
+    #HAS-A
+    company:
+      title: BCCI
+      location: Delhi
+      size: 10
+     
+        
