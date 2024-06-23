@@ -10,6 +10,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	
+	
 	<groupId>pwskills</groupId>
 	<artifactId>02-spring-boot-DI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
