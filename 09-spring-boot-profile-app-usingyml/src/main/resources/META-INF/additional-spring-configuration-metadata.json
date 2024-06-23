@@ -1,0 +1,52 @@
+{"properties": [
+  {
+    "name": "emp.info.name",
+    "type": "java.lang.String",
+    "description": "A description for 'emp.info.name'"
+  },
+  {
+    "name": "emp.info.eid",
+    "type": "java.lang.String",
+    "description": "A description for 'emp.info.eid'"
+  },
+  {
+    "name": "emp.info.nickNames",
+    "type": "java.lang.String",
+    "description": "A description for 'emp.info.nickNames'"
+  },
+  {
+    "name": "emp.info.friendsNames",
+    "type": "java.lang.String",
+    "description": "A description for 'emp.info.friendsNames'"
+  },
+  {
+    "name": "emp.info.phoneNumber",
+    "type": "java.lang.String",
+    "description": "A description for 'emp.info.phoneNumber'"
+  },
+  {
+    "name": "emp.info.bankDetails.sbi",
+    "type": "java.lang.String",
+    "description": "A description for 'emp.info.bankDetails.sbi'"
+  },
+  {
+    "name": "emp.info.bankDetails.canara",
+    "type": "java.lang.String",
+    "description": "A description for 'emp.info.bankDetails.canara'"
+  },
+  {
+    "name": "emp.info.company.title",
+    "type": "java.lang.String",
+    "description": "A description for 'emp.info.company.title'"
+  },
+  {
+    "name": "emp.info.company.location",
+    "type": "java.lang.String",
+    "description": "A description for 'emp.info.company.location'"
+  },
+  {
+    "name": "emp.info.company.size",
+    "type": "java.lang.String",
+    "description": "A description for 'emp.info.company.size'"
+  }
+]}

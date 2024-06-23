@@ -11,7 +11,6 @@ import in.pwskills.nitin.controller.MainController;
 
 @SpringBootApplication
 public class Application {
-	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		// Start the container
 		ApplicationContext context = SpringApplication.run(Application.class, args);
