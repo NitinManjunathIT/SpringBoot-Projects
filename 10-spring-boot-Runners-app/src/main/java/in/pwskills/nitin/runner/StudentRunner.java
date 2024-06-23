@@ -31,7 +31,7 @@ public class StudentRunner implements CommandLineRunner, Ordered {
 	// After creation of all object of singleton scope
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("StudentRunner.run()");
+		System.out.println("\nStudentRunner.run()");
 		System.out.println(employee);
 		System.out.println(student);
 
@@ -46,4 +46,5 @@ public class StudentRunner implements CommandLineRunner, Ordered {
 		System.out.println("StudentRunner.getOrder()");
 		return 15;
 	}
+
 }

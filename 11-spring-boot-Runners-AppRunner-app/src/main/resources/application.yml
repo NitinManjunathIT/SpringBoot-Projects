@@ -1,0 +1,11 @@
+emp:
+  info:
+    eid: 10
+    ename: sachin
+    eaddress: MI
+
+std:
+  info:
+    sid: 18
+    sname: dravid
+    saddress: RCB

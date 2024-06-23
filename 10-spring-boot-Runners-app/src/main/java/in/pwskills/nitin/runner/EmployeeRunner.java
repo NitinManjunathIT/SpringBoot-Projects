@@ -30,7 +30,7 @@ public class EmployeeRunner implements CommandLineRunner {
 	// After creation of all object of singleton scope
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("EmployeeRunner.run()");
+		System.out.println("\nEmployeeRunner.run()");
 		System.out.println(employee);
 		System.out.println(student);
 
