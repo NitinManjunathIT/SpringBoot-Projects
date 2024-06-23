@@ -40,6 +40,17 @@ spring:
     password: system123
     url: jdbc:oracle:thin:@localhost:1521:XE
     username: system
+---
+spring:
+  config:
+    activate:
+      on-profile:
+      - prodst
+  datasource:
+    password: system123
+    url: jdbc:oracle:thin:@localhost:1521:XE
+    username: system
+    
 
 
     
