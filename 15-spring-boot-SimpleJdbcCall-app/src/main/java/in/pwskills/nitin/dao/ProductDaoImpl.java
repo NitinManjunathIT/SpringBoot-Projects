@@ -13,9 +13,6 @@ import org.springframework.stereotype.Repository;
 
 import in.pwskills.nitin.beans.ProductBO;
 
-
-
-
 /*
  * 
 DROP PROCEDURE IF EXISTS `GET_PRODUCT_DETAILS_BY_NAME`$$
