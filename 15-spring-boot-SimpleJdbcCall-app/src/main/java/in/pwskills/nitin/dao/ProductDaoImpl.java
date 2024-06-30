@@ -13,6 +13,29 @@ import org.springframework.stereotype.Repository;
 
 import in.pwskills.nitin.beans.ProductBO;
 
+
+
+
+/*
+ * 
+DROP PROCEDURE IF EXISTS `GET_PRODUCT_DETAILS_BY_NAME`$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GET_PRODUCT_DETAILS_BY_NAME`(
+			IN name1 VARCHAR(20),
+			IN name2 VARCHAR(20))
+BEGIN
+	   SELECT pid,pname,price,quantity
+	       FROM
+	          products
+	            WHERE pname IN (name1,name2);
+
+	END$$
+
+DELIMITER ;
+ * 
+ * 
+ * 
+ */
 @Repository("dao")
 public class ProductDaoImpl implements IProductDao {
 
