@@ -19,9 +19,7 @@ import in.pwskills.nitin.beans.PoliticalParty;
 public class PoliticalPartyDaoImpl implements IPoliticalPartyDao {
 
 	private static final String GET_PARTY_DETAILS_BY_ID = "select partyId,flagcolors,partyName,partySymbol from politicalParty where partyId=?";
-
 	private static final String GET_PARTY_DETAILS_BY_NAMES = "select partyId,flagcolors,partyName,partySymbol from politicalParty where partyName in (?,?)";
-
 	private static final String UPDATE_PARTY_FLAG_COLOR_BY_NAME = "update politicalParty set flagcolors = ? where partyName = ?";
 
 	private PoliticalPartySelector1 selector1;
