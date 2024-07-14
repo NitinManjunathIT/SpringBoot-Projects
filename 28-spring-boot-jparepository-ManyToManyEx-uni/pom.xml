@@ -10,9 +10,9 @@
 	</parent>
 	
 	<groupId>pwskills</groupId>
-	<artifactId>27-spring-boot-jparepository-OneToManyEx-uni</artifactId>
+	<artifactId>28-spring-boot-jparepository-ManyToManyEx-uni</artifactId>
 	<version>1.0</version>
-	<name>27-spring-boot-jparepository-OneToManyEx-uni</name>
+	<name>28-spring-boot-jparepository-ManyToManyEx-uni</name>
 	<description>JpaRepository</description>
 	
 	<properties>
