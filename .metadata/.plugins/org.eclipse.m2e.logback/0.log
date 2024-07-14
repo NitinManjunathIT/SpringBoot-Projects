@@ -7896,3 +7896,7 @@ Caused by: java.lang.Exception: File not found: C:\Users\nitin\Downloads\01-spri
 2024-07-14 13:06:10,488 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2024-07-14 13:06:10,517 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2024-07-14 13:06:10,523 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\weekend_springBoot\28-spring-boot-jparepository-ManyToManyEx-uni\src\test\resources
+2024-07-14 13:17:54,803 [Worker-60: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: pwskills:28-spring-boot-jparepository-ManyToManyEx-uni:1.0 @ D:\weekend_springBoot\28-spring-boot-jparepository-ManyToManyEx-uni\pom.xml.
+2024-07-14 13:17:56,308 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-14 13:17:56,311 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-14 13:17:56,316 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\weekend_springBoot\28-spring-boot-jparepository-ManyToManyEx-uni\src\test\resources
