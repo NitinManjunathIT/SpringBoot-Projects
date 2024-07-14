@@ -30,7 +30,8 @@ public class Employee implements Serializable {
 
 	// ManyToOne
 	@ManyToOne
-	@JoinColumn(name = "deptIdFk",referencedColumnName = "did")
+	@JoinColumn(name = "deptIdFk",
+			referencedColumnName = "did")
 	private Department dept;
 
 	public Employee() {
