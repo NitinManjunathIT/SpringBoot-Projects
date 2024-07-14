@@ -27,7 +27,8 @@ public class Product implements Serializable {
 	private String prodCode;
 
 	@OneToMany
-	@JoinColumn(name = "modelIdFK",referencedColumnName = "pid")
+	@JoinColumn(name = "prodIdFk"
+		,referencedColumnName = "pid")
 	private List<Model> mobs;
 
 	@Override
