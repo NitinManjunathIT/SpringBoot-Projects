@@ -69,5 +69,11 @@ public class TestRunner implements CommandLineRunner {
 			System.out.println(obj[0] + "....." + obj[1]);
 		}
 		
+		System.out.println("******************");
+		objs = erepo.getEmployeesOfParticularDepartment("DEV");
+		for (Object[] obj : objs) {
+			System.out.println(obj[0] + "....." + obj[1]);
+		}
+		
 	}
 }
