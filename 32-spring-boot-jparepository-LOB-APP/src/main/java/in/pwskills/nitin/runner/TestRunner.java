@@ -1,10 +1,18 @@
 package in.pwskills.nitin.runner;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.OutputStream;
+import java.io.Writer;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import in.pwskills.nitin.dao.IMarriageRepository;
+import in.pwskills.nitin.entity.MarriageSeeker;
 
 @Component
 public class TestRunner implements CommandLineRunner {
@@ -47,11 +55,27 @@ public class TestRunner implements CommandLineRunner {
 		 * 
 		 * scanner.close(); reader.close(); is.close();
 		 */
-		
-		//code for retrieval
-		
-		
-		
-		
+
+		// code for retrieval
+		Optional<MarriageSeeker> optional = repo.findById(1L);
+		if (optional.isPresent()) {
+			MarriageSeeker obj = optional.get();
+			System.out.println(obj);
+
+			System.out.println("Image data stored in ...");
+			OutputStream os = new FileOutputStream(new File("retrieved_img.jpg"));
+			os.write(obj.getPhoto());
+			os.flush();
+
+			System.out.println("BioData stored in ...");
+			Writer writer = new FileWriter(new File("retrieved_bio.txt"));
+			writer.write(obj.getBiodata());
+			writer.flush();
+			System.out.println("Lob's are retrieved...");
+
+		} else {
+			System.out.println("Record not available...");
+		}
+
 	}
 }
