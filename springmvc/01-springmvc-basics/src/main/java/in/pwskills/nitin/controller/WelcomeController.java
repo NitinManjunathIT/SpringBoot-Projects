@@ -25,6 +25,7 @@ public class WelcomeController {
 	//@RequestMapping(value = "/",method = RequestMethod.GET)
 	@GetMapping(value="/")
 	public String welcomeMsg(Model model) {
+		System.out.println("Implementation class is :: "+model.getClass().getName());
 		System.out.println("RQ :: WelcomeController.welcomeMsg()");
 		
 		model.addAttribute("BRAND", "PWSKILLS");
