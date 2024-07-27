@@ -8,13 +8,11 @@
 		<version>3.2.8</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	
 	<groupId>pwskills</groupId>
-	<artifactId>02-springmvc-C2V-App</artifactId>
+	<artifactId>03-springmvc-V2C-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>02-springmvc-C2V-App</name>
-	<description>CtoV</description>
-	
+	<name>03-springmvc-V2C-app</name>
+	<description>springmvc</description>
 	
 	<properties>
 		<java.version>22</java.version>
@@ -28,6 +26,17 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
@@ -37,35 +46,7 @@
 		    <groupId>org.apache.tomcat.embed</groupId>
 		    <artifactId>tomcat-embed-jasper</artifactId>
 		</dependency>
-	
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
 		
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
-		
-		<dependency>
-		    <groupId>jakarta.servlet.jsp.jstl</groupId>
-		    <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
-	    </dependency>
-
-		<dependency>
-		    <groupId>org.glassfish.web</groupId>
-		    <artifactId>jakarta.servlet.jsp.jstl</artifactId>
-		</dependency>
-			
 	</dependencies>
 
 	<build>
@@ -84,4 +65,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>

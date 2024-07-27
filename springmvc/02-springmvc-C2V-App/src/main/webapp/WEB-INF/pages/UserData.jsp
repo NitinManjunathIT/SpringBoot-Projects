@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1" isELIgnored="false"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%@ taglib uri="jakarta.tags.core"	 prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,18 +22,21 @@
 	<hr>
 	<h1>Iterating the User objects</h1>
 	<table border='1'>
+	
 		<tr>
 			<th>UserID</th>
 			<th>UserName</th>
 			<th>UserRole</th>
 		</tr>
+		
 		<c:forEach items="${objList}" var="obj">
 			<tr>
-				<td>${obj.userId}</td>
-				<td>${obj.userName}</td>
-				<td>${obj.userRole}</td>
+				<td>${obj.userId }</td>
+				<td>${obj.userName }</td>
+				<td>${obj.userRole }</td>
 			</tr>
 		</c:forEach>
+		
 	</table>
 </body>
 </html>
