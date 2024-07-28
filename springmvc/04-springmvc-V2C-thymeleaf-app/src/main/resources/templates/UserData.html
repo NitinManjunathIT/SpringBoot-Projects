@@ -3,17 +3,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>THYMELEAF OUTPUT</title>
-<style type="text/css">
-	span{
-	 	background-color: green;
-	 	font-size: 25px;
-	 	font-weight: bold;
-	 }
-</style>
+	<link rel="stylesheet" th:href="@{/css/employee.css}">
 </head>
 <body>
 		<h1>THYMELEAF OUTPUT WITH SPRINGBOOT UI</h1>
-		<p>The USERNAME is :: <span th:text=${user}></span></p>
-		<p>The ADDRESS  is :: <span th:text=${addr}></span></p>
+		<marquee>
+			<p>The USERNAME is :: <span th:text=${user}></span></p>
+			<p>The ADDRESS  is :: <span th:text=${addr}></span></p>
+		</marquee>
 </body>
 </html>
