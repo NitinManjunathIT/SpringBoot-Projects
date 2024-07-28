@@ -35,10 +35,11 @@ public class EmployeeController {
 	 */
 	@PostMapping(value="/save")
 	public String saveFormData(  
-			@ModelAttribute
-			Employee employee,
-			Model model
-			) {
+					@ModelAttribute
+					Employee employee,
+					Model model
+			) 
+	{
 		System.out.println(employee);
 		model.addAttribute("obj", employee);
 		return "EmpPage";

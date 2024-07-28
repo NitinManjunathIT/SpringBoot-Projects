@@ -12,10 +12,10 @@
 	</parent>
 	
 	<groupId>pwskills</groupId>
-	<artifactId>03-springmvc-V2C-app</artifactId>
+	<artifactId>04-springmvc-V2C-thymeleaf-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>03-springmvc-V2C-app</name>
-	<description>springmvc</description>
+	<name>04-springmvc-V2C-thymeleaf-app</name>
+	<description>Thymeleaf</description>
 	
 	<properties>
 		<java.version>22</java.version>
@@ -38,16 +38,16 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-jasper -->
+			
 		<dependency>
-		    <groupId>org.apache.tomcat.embed</groupId>
-		    <artifactId>tomcat-embed-jasper</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 		
 	</dependencies>
@@ -69,4 +69,17 @@
 		</plugins>
 	</build>
 
+	<url/>
+	<licenses>
+		<license/>
+	</licenses>
+	<developers>
+		<developer/>
+	</developers>
+	<scm>
+		<connection/>
+		<developerConnection/>
+		<tag/>
+		<url/>
+	</scm>
 </project>
