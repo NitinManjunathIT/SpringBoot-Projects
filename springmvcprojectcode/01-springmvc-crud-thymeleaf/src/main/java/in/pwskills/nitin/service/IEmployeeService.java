@@ -14,5 +14,7 @@ public interface IEmployeeService {
 	
 	//delete the record
 	void deleteRecord(Integer eid);
-
+	
+	//get the record
+	Employee findEmployee(Integer eid);
 }

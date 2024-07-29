@@ -25,6 +25,9 @@
 	
 			<form action="#"  method="POST" th:action="@{/employee/save}" th:object="${employee}">
 					
+				<!-- ADD ID AS THE HIDDEN FIELD -->
+				<input type="hidden" th:field="*{id}">
+				
 				<input type="text" class="form-control mb-4 col-4" placeholder="First name" th:field="*{firstName}">
 	
 				<input type="text" class="form-control mb-4 col-4" placeholder="Last name" th:field="*{lastName}">

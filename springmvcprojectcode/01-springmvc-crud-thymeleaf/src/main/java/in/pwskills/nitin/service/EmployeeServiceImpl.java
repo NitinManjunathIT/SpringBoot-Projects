@@ -22,13 +22,18 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
 	@Override
 	public List<Employee> displayAllRecords() {
-		return repo.findAll();
+		return repo.findAllByOrderByLastNameAsc();
 	}
 
 	@Override
 	public void deleteRecord(Integer eid) {
 		repo.delete(repo.findById(eid).orElseThrow(
 				()->new EmployeeNotFoundException("record not found for deletion")));
+	}
+
+	@Override
+	public Employee findEmployee(Integer eid) {
+		return repo.findById(eid).get();
 	}
 
 }

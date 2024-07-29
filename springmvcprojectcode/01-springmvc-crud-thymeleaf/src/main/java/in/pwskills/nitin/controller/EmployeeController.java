@@ -57,6 +57,7 @@ public class EmployeeController {
 		// save the employee
 		service.saveRecord(employee);
 
+		//redirect to display the record
 		return "redirect:/employee/list";
 	}
 
@@ -101,6 +102,32 @@ public class EmployeeController {
 		
 		return "redirect:/employee/list";
 	}
+	
+	/****
+	 * 				Display the Employee Data on a form based on id
+	 *  1. Collect ID from the user
+	 *  2. METHOD : POST
+	 *  3. ACTION : /showFormForUpdate
+	 *  4. R.T    : employee-form
+	 *  5. INPUT  : Model, ID @RequestParam
+	 */
+	@PostMapping("/showFormForUpdate")
+	public String showFormForUpdate(
+			@RequestParam("empId")
+			Integer eid,
+			Model model
+			) {
+		
+		//retrieve employee based on id
+		Employee employee = service.findEmployee(eid);
+		
+		//add employee and send it to UI
+		model.addAttribute("employee", employee);
+		
+		//send the form by carrying the employee object
+		return "/employee/employee-form";
+	}
+	
 
 }
 

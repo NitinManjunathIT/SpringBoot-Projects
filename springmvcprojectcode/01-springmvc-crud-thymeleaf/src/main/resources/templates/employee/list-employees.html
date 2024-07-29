@@ -44,21 +44,29 @@
 
 					<td>
 						<div class="row">
-							
+
+							<div class="col-small">
+								<!-- Add "delete" button/link -->
+								<form action="#" method="POST" th:action="@{/employee/showFormForUpdate}">
+									<input type="hidden" name="empId" th:value="${employee.id}">
+									<button type="submit" class="btn btn-info btn-sm ml-3 mr-1">Update</button>
+								</form>
+							</div>
+
 							<div class="col-small">
 								<!-- Add "delete" button/link -->
 								<form action="#" method="POST" th:action="@{/employee/delete}">
 									<input type="hidden" name="empId" th:value="${employee.id}">
 									<button type="submit" class="btn btn-danger btn-sm"
 										onclick="if (!(confirm('Are you sure you want to delete this employee?'))) 											return false">
-										  Delete </button>
+										Delete</button>
 								</form>
 							</div>
-							
+
 						</div>
 					</td>
-					
-					
+
+
 				</tr>
 			</tbody>
 		</table>
