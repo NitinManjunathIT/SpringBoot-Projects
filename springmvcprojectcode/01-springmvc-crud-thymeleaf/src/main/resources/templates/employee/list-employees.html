@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+    <title>Employee Directory</title>
+</head>
+
+<body>
+
+<div class="container">
+
+	<h3>Employee Directory</h3>
+	<hr>
+	
+	<!-- Add a button -->
+	<a class="btn btn-primary btn-sm mb-3" th:href="@{/employee/showForm}">
+		Add Employee
+	</a>
+	
+	
+	<table class="table table-bordered table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="employee : ${employees}">
+				<td th:text="${employee.firstName}"/>	
+				<td th:text="${employee.lastName}"/>	
+				<td th:text="${employee.email}"/>			
+			</tr>
+		</tbody>		
+	</table>	
+</div>	
+</body>
+</html>
+
+
+
+
+
+
