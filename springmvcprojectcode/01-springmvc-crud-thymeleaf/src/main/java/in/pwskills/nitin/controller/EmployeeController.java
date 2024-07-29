@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import in.pwskills.nitin.model.Employee;
 import in.pwskills.nitin.service.IEmployeeService;
@@ -78,5 +79,35 @@ public class EmployeeController {
 		
 		return "/employee/list-employees";
 	}
+	
+	
+	
+	/****
+	 * 				Delete the Employee based on id
+	 *  1. Collect ID from the user
+	 *  2. METHOD : POST
+	 *  3. ACTION : /delete
+	 *  4. R.T    : list-employees
+	 *  5. INPUT  : ID @RequestParam
+	 */
+	
+	@PostMapping("/delete")
+	public String deleteEmployee(
+			@RequestParam("empId")
+			Integer eid
+			) {
+		
+		service.deleteRecord(eid);
+		
+		return "redirect:/employee/list";
+	}
 
 }
+
+
+
+
+
+
+
+

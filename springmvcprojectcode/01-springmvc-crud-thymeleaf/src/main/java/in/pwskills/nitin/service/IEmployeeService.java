@@ -11,5 +11,8 @@ public interface IEmployeeService {
 
 	// display the record
 	List<Employee> displayAllRecords();
+	
+	//delete the record
+	void deleteRecord(Integer eid);
 
 }
