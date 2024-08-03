@@ -10,13 +10,6 @@
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-	
-	<style type="text/css">
-		li{
-			width: 80px;
-			text-align: center;
-		}
-	</style>
 
 <title>Employee Directory</title>
 </head>
@@ -54,7 +47,8 @@
 
 							<div class="col-small">
 								<!-- Add "delete" button/link -->
-								<form action="#" method="POST" th:action="@{/employee/showFormForUpdate}">
+								<form action="#" method="POST"
+									th:action="@{/employee/showFormForUpdate}">
 									<input type="hidden" name="empId" th:value="${employee.id}">
 									<button type="submit" class="btn btn-info btn-sm ml-3 mr-1">Update</button>
 								</form>
@@ -78,37 +72,50 @@
 			</tbody>
 		</table>
 	</div>
-	
+
 	<!-- Creating a button for navigation dynamically using the "page" object -->
 	<nav aria-label="Page navigation example">
 		<ul class="pagination justify-content-center">
 
-			<li class="page-item">
-				<a class="page-link" th:if="${!page.isFirst()}" th:href="@{/employee/list(page=0)}">First</a>
+			<li class="page-item"><a class="page-link"
+				th:if="${!page.isFirst()}" th:href="@{/employee/list(page=0)}">First</a>
 			</li>
-	
-			<li class="page-item">
-				<a class="page-link" th:if="${page.hasPrevious()}" th:href="@{/employee/list(page=${page.getNumber()-1})}">Previous</a>
+
+			<li class="page-item"><a class="page-link"
+				th:if="${page.hasPrevious()}"
+				th:href="@{/employee/list(page=${page.getNumber()-1})}">Previous</a>
 			</li>
-					
+
 			<th:block th:each="i: ${#numbers.sequence(0, page.getTotalPages()- 1)}">
-				<li class="page-item">
-					<a class="page-link" th:href="@{/employee/list(page=${i})}">[[${i+1}]]</a>
-				</li>
-			</th:block>
-					
-			<li class="page-item">
-				<a class="page-link" th:if="${page.hasNext()}" th:href="@{/employee/list(page=${page.getNumber()+1})}">Next</a>
-			</li>
+					<div th:switch="${i}">
+						<div th:case="${page.getNumber()}">
+							<li class="page-item active">
+								<a class="page-link" th:href="@{/employee/list(page=${i})}">[[${i+1}]]</a>
+							</li>
+						</div>
+
+						<div th:case="*">
+							<li class="page-item">
+								<a class="page-link" th:href="@{/employee/list(page=${i})}">[[${i+1}]]</a>
+							</li>
+						</div>
+					</div>
+				</th:block>
 			
-			<li class="page-item">
-				<a class="page-link" th:if="${!page.isLast()}" th:href="@{/employee/list(page=${page.getTotalPages()-1})}">Last</a>
+
+			<li class="page-item"><a class="page-link"
+				th:if="${page.hasNext()}"
+				th:href="@{/employee/list(page=${page.getNumber()+1})}">Next</a></li>
+
+			<li class="page-item"><a class="page-link"
+				th:if="${!page.isLast()}"
+				th:href="@{/employee/list(page=${page.getTotalPages()-1})}">Last</a>
 			</li>
-	</ul>
-</nav>
-	
-	
-	
+		</ul>
+	</nav>
+
+
+
 </body>
 </html>
 
