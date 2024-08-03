@@ -1,8 +1,8 @@
 package in.pwskills.nitin.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import in.pwskills.nitin.exception.EmployeeNotFoundException;
@@ -21,14 +21,14 @@ public class EmployeeServiceImpl implements IEmployeeService {
 	}
 
 	@Override
-	public List<Employee> displayAllRecords() {
-		return repo.findAllByOrderByLastNameAsc();
+	public Page<Employee> displayAllRecords(Pageable pageable) {
+		return repo.findAll(pageable);
 	}
 
 	@Override
 	public void deleteRecord(Integer eid) {
-		repo.delete(repo.findById(eid).orElseThrow(
-				()->new EmployeeNotFoundException("record not found for deletion")));
+		repo.delete(
+				repo.findById(eid).orElseThrow(() -> new EmployeeNotFoundException("record not found for deletion")));
 	}
 
 	@Override

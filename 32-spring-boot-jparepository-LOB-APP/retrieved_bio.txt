@@ -1,4 +1,0 @@
-name : nitin
-dob  : 03/01/1993
-education : BE(CSE)
-SkillSet  : Java,JEE,Spring,Microservice,React

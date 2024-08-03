@@ -1,6 +1,7 @@
 package in.pwskills.nitin.service;
 
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import in.pwskills.nitin.model.Employee;
 
@@ -10,7 +11,7 @@ public interface IEmployeeService {
 	void saveRecord(Employee employee);
 
 	// display the record
-	List<Employee> displayAllRecords();
+	Page<Employee> displayAllRecords(Pageable pageable);
 	
 	//delete the record
 	void deleteRecord(Integer eid);

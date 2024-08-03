@@ -1,8 +1,9 @@
 package in.pwskills.nitin.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -70,13 +71,19 @@ public class EmployeeController {
 	 * 5. INPUT : Model
 	 */
 	@GetMapping("/list")
-	public String displayEmployeeList(Model model) {
+	public String displayEmployeeList(Model model,
+									@PageableDefault(page = 0,size = 3) 
+										Pageable pageable
+									) 
+	{
 		
-		//Get all records from database
-		List<Employee> employees = service.displayAllRecords();
+		//Get all records from database based on pageNumber
+		Page<Employee> page = service.displayAllRecords(pageable);
+		
 		
 		//keep in model and send to UI
-		model.addAttribute("employees", employees);
+		model.addAttribute("employees", page.getContent());
+		model.addAttribute("page", page);
 		
 		return "/employee/list-employees";
 	}

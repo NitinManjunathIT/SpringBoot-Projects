@@ -10,6 +10,13 @@
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	
+	<style type="text/css">
+		li{
+			width: 80px;
+			text-align: center;
+		}
+	</style>
 
 <title>Employee Directory</title>
 </head>
@@ -71,6 +78,37 @@
 			</tbody>
 		</table>
 	</div>
+	
+	<!-- Creating a button for navigation dynamically using the "page" object -->
+	<nav aria-label="Page navigation example">
+		<ul class="pagination justify-content-center">
+
+			<li class="page-item">
+				<a class="page-link" th:if="${!page.isFirst()}" th:href="@{/employee/list(page=0)}">First</a>
+			</li>
+	
+			<li class="page-item">
+				<a class="page-link" th:if="${page.hasPrevious()}" th:href="@{/employee/list(page=${page.getNumber()-1})}">Previous</a>
+			</li>
+					
+			<th:block th:each="i: ${#numbers.sequence(0, page.getTotalPages()- 1)}">
+				<li class="page-item">
+					<a class="page-link" th:href="@{/employee/list(page=${i})}">[[${i+1}]]</a>
+				</li>
+			</th:block>
+					
+			<li class="page-item">
+				<a class="page-link" th:if="${page.hasNext()}" th:href="@{/employee/list(page=${page.getNumber()+1})}">Next</a>
+			</li>
+			
+			<li class="page-item">
+				<a class="page-link" th:if="${!page.isLast()}" th:href="@{/employee/list(page=${page.getTotalPages()-1})}">Last</a>
+			</li>
+	</ul>
+</nav>
+	
+	
+	
 </body>
 </html>
 
