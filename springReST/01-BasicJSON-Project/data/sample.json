@@ -7,5 +7,6 @@
 					"cityName":"rcb",
 					"stateName": "karnataka",
 					"countryName": "IND"
-	             }
+	             },
+	  "friendsName": ["sachin","dhoni","dravid","gambir"]
 }
